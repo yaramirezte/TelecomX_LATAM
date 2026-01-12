@@ -16,6 +16,7 @@ Este análisis fue desarrollado como parte de la **especialización en Data Scie
 - ¿La cantidad de servicios contratados influye en la probabilidad de churn?
 
 ---
+
 ## 🛠 Tecnologías y Dependencias
 El proyecto fue desarrollado utilizando **Python 3.12.12** y las siguientes librerías:
 
@@ -29,6 +30,7 @@ Instalación rápida de dependencias:
 ```bash
 pip install pandas numpy plotly matplotlib
 ```
+---
 
 ## 📂 Estructura del Proyecto
 ```
@@ -44,6 +46,9 @@ pip install pandas numpy plotly matplotlib
     ├── Antigüedad_vs_evasion.png
     └── servicios_vs_evasion.png
 ```
+
+---
+
 ## 🧹 Limpieza y Tratamiento de Datos
 
 Durante esta etapa se realizaron los siguientes pasos:
@@ -54,11 +59,15 @@ Durante esta etapa se realizaron los siguientes pasos:
 - Transformación de variables categóricas a formato binario.
 - Renombrado de columnas para mejorar la comprensión del dataset.
 
+---
+
 ## ➕ Creación de nuevas variables
 
 - Cargos_Diarios: cálculo del gasto diario a partir de la facturación mensual.
 - Segmento_Gasto_Diario: categorización del gasto diario en rangos (Muy Bajo, Bajo, Medio, Alto, Muy Alto).
 - Cantidad_Servicios: número total de servicios contratados por cliente.
+
+---
   
 ## 📊 Análisis Exploratorio y Visualizaciones
 
@@ -100,9 +109,13 @@ Los clientes con menor antigüedad presentan una mayor propensión a cancelar el
 🔹 **Insight:**  
 A medida que aumenta la cantidad de servicios contratados por un cliente, la tasa de evasión disminuye, lo que evidencia una mayor fidelización cuando se contratan múltiples servicios.
 
+---
+
 ## 🧠 Insight general
 
 El análisis evidencia que la evasión de clientes en Telecom X está principalmente relacionada con la duración del contrato, la antigüedad, el nivel de gasto y la cantidad de servicios contratados, proporcionando información clave para diseñar estrategias de retención más efectivas.
+
+---
 
 ## ✅ Recomendaciones
 
@@ -110,6 +123,8 @@ El análisis evidencia que la evasión de clientes en Telecom X está principalm
 - Implementar estrategias de cross-selling para aumentar la cantidad de servicios.
 - Diseñar acciones de retención temprana para clientes nuevos.
 - Identificar perfiles de alto riesgo para campañas personalizadas.
+
+---
 
 ## ▶️ Cómo ejecutar el proyecto
 
@@ -127,20 +142,16 @@ El análisis evidencia que la evasión de clientes en Telecom X está principalm
    - Creación de variables adicionales como Cargos_Diarios y Segmento_Gasto_Diario.
    - Análisis exploratorio con gráficos de evasión según variables categóricas y numéricas.
    - Conclusiones y recomendaciones estratégicas.
-     
-## 📊 Resultados Destacados
 
-- Los clientes con menor antigüedad presentan mayor probabilidad de cancelar el servicio.
-- Los contratos mes a mes están asociados a mayores tasas de evasión.
-- Clientes con menor gasto total acumulado tienden a abandonar el servicio.
-- Algunas características del método de pago y tipo de contrato muestran patrones claros de riesgo.
-- Estos insights permiten diseñar estrategias de retención temprana, ofertas personalizadas y mejorar la fidelización.
+---
 
 ## ⚠ Posibles Problemas o Consideraciones
 
 - Algunos registros iniciales contenían valores nulos o inconsistentes que fueron corregidos.
 - Las variables categóricas fueron transformadas a valores binarios para facilitar el análisis.
 - Las visualizaciones interactúan mejor en entornos como Google Colab o Jupyter Notebook, pero pueden exportarse a HTML para compartir.
+
+---
 
 ## 👨‍💻 Sobre mí
 ¡Hola! Soy Yeni Andrea Ramírez, apasionada por los datos y entusiasta del análisis, SQL e ingeniería de datos. Este proyecto fue desarrollado como parte de la especialización en Data Science de Alura Latam, y me permitió aplicar de manera práctica los conocimientos adquiridos en el curso, incluyendo limpieza de datos, análisis exploratorio y visualización de información. Forma parte de mi portafolio para mostrar mis habilidades en soluciones basadas en datos reales.
