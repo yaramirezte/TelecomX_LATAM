@@ -39,9 +39,9 @@ pip install pandas numpy plotly matplotlib
 │   └── TelecomX_Data.json      # Datos obtenidos desde la API (JSON)
 └── images/
     ├── churn_proporcion.png
-    ├── churn_por_genero.png
     ├── churn_por_contrato.png
-    ├── cargos_vs_evasion.png
+    ├── churn_por_método_de_pago.png
+    ├── Antigüedad_vs_evasion.png
     └── servicios_vs_evasion.png
 ```
 ## 🧹 Limpieza y Tratamiento de Datos
@@ -70,14 +70,6 @@ La mayoría de los clientes no presenta evasión; sin embargo, existe un porcent
 
 ---
 
-### Evasión según género
-![Evasión por género](images/churn_por_genero.png)
-
-🔹 **Insight:**  
-No se observan diferencias significativas en la evasión entre géneros, lo que indica que esta variable no es un factor determinante por sí sola.
-
----
-
 ### Evasión según tipo de contrato
 ![Evasión por contrato](images/churn_por_contrato.png)
 
@@ -86,11 +78,19 @@ Los clientes con contratos **mes a mes** presentan una tasa de evasión consider
 
 ---
 
-### Relación entre cargos diarios y evasión
-![Cargos diarios vs evasión](images/cargos_vs_evasion.png)
+### Evasión según método de pago
+![Evasión por método de pago](images/churn_por_método_de_pago.png)
 
 🔹 **Insight:**  
-Los clientes con cargos diarios más altos tienden a mostrar una mayor propensión a cancelar el servicio, lo que sugiere sensibilidad al precio.
+Se observa una mayor evasión en clientes que utilizan métodos de pago manuales, mientras que los métodos automáticos muestran una menor probabilidad de cancelación.
+
+---
+
+### Antigüedad del cliente vs evasión
+![Antigüedad del cliente vs evasión](images/Antigüedad_vs_evasion.png)
+
+🔹 **Insight:**  
+Los clientes con menor antigüedad presentan una mayor propensión a cancelar el servicio, lo que sugiere que los primeros meses son críticos para la fidelización.
 
 ---
 
@@ -98,30 +98,18 @@ Los clientes con cargos diarios más altos tienden a mostrar una mayor propensi�
 ![Servicios vs evasión](images/servicios_vs_evasion.png)
 
 🔹 **Insight:**  
-A medida que aumenta la cantidad de servicios contratados, la probabilidad de evasión disminuye, indicando mayor fidelización del cliente.
+A medida que aumenta la cantidad de servicios contratados por un cliente, la tasa de evasión disminuye, lo que evidencia una mayor fidelización cuando se contratan múltiples servicios.
 
+## 🧠 Insight general
 
-📈 Insights Destacados
+El análisis evidencia que la evasión de clientes en Telecom X está principalmente relacionada con la duración del contrato, la antigüedad, el nivel de gasto y la cantidad de servicios contratados, proporcionando información clave para diseñar estrategias de retención más efectivas.
 
-Los clientes con menor antigüedad presentan mayores tasas de evasión.
+## ✅ Recomendaciones
 
-Los contratos mes a mes están asociados a mayor churn.
-
-Clientes con menor gasto total acumulado tienden a cancelar con mayor frecuencia.
-
-Existe una relación negativa entre antigüedad y evasión.
-
-A mayor cantidad de servicios contratados, menor probabilidad de churn.
-
-✅ Recomendaciones
-
-Fomentar contratos de mayor duración con incentivos.
-
-Implementar estrategias de cross-selling para aumentar la cantidad de servicios.
-
-Diseñar acciones de retención temprana para clientes nuevos.
-
-Identificar perfiles de alto riesgo para campañas personalizadas.
+- Fomentar contratos de mayor duración con incentivos.
+- Implementar estrategias de cross-selling para aumentar la cantidad de servicios.
+- Diseñar acciones de retención temprana para clientes nuevos.
+- Identificar perfiles de alto riesgo para campañas personalizadas.
 
 ## ▶️ Cómo ejecutar el proyecto
 
