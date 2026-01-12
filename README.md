@@ -1,20 +1,23 @@
 # Análisis de Evasión de Clientes (Churn) – Telecom X
 
-## 📌 Descripción del Proyecto
-Este proyecto tiene como objetivo analizar la evasión de clientes (*Churn*) en la empresa **Telecom X**, identificando patrones y factores que influyen en la decisión de cancelar el servicio.  
-El análisis se centra en datos demográficos, características del servicio y variables de facturación, con el fin de generar insights útiles para diseñar estrategias de retención.
+## 📌 Propósito del Proyecto
+Este proyecto tiene como objetivo analizar la **evasión de clientes (Churn)** en la empresa ficticia **Telecom X**, identificando patrones y factores que influyen en la decisión de cancelar el servicio.
 
-El proyecto incluye:
+A través de técnicas de **limpieza de datos, transformación, análisis exploratorio y visualización**, se busca generar **insights accionables** que puedan apoyar la toma de decisiones estratégicas orientadas a la **retención de clientes**.
 
-- Limpieza y tratamiento de datos provenientes de una API en formato JSON.
-- Transformación y estandarización de variables.
-- Análisis exploratorio con visualizaciones para identificar patrones de evasión.
-- Conclusiones y recomendaciones estratégicas basadas en los datos.
+Este análisis fue desarrollado como parte de la **especialización en Data Science de Alura Latam** y forma parte de mi portafolio profesional.
 
 ---
 
+## 🧠 Preguntas que guía el análisis
+- ¿Cuál es la proporción de clientes que abandonan el servicio?
+- ¿Cómo se distribuye la evasión según variables demográficas y contractuales?
+- ¿Qué relación existe entre cargos, antigüedad y evasión?
+- ¿La cantidad de servicios contratados influye en la probabilidad de churn?
+
+---
 ## 🛠 Tecnologías y Dependencias
-El análisis se realizó utilizando **Python 3.12.12** y las siguientes librerías:
+El proyecto fue desarrollado utilizando **Python 3.12.12** y las siguientes librerías:
 
 - [pandas](https://pandas.pydata.org/) → Manipulación y limpieza de datos
 - [numpy](https://numpy.org/) → Cálculos numéricos
@@ -31,12 +34,96 @@ pip install pandas numpy plotly matplotlib
 ```
 .
 ├── TelecomX_LATAM.ipynb        # Notebook con todo el análisis
-├── README.md                   # Este archivo
-└── data/
-    └── TelecomX_Data.json      # Archivo de datos (o enlace a la API)
+├── README.md                   # Documentación del proyecto
+├── data/
+│   └── TelecomX_Data.json      # Datos obtenidos desde la API (JSON)
+└── images/
+    ├── churn_proporcion.png
+    ├── churn_por_genero.png
+    ├── churn_por_contrato.png
+    ├── cargos_vs_evasion.png
+    └── servicios_vs_evasion.png
 ```
+## 🧹 Limpieza y Tratamiento de Datos
 
-## 🚀 Uso del Proyecto
+Durante esta etapa se realizaron los siguientes pasos:
+- Carga de datos desde una API en formato JSON.
+- Normalización de estructuras anidadas.
+- Identificación y tratamiento de valores nulos e inconsistentes.
+- Corrección de categorías como “No internet service” y “No phone service”.
+- Transformación de variables categóricas a formato binario.
+- Renombrado de columnas para mejorar la comprensión del dataset.
+
+## ➕ Creación de nuevas variables
+
+- Cargos_Diarios: cálculo del gasto diario a partir de la facturación mensual.
+- Segmento_Gasto_Diario: categorización del gasto diario en rangos (Muy Bajo, Bajo, Medio, Alto, Muy Alto).
+- Cantidad_Servicios: número total de servicios contratados por cliente.
+  
+## 📊 Análisis Exploratorio y Visualizaciones
+
+### Distribución de la evasión de clientes
+![Distribución de evasión](images/churn_proporcion.png)
+
+🔹 **Insight:**  
+La mayoría de los clientes no presenta evasión; sin embargo, existe un porcentaje relevante de cancelaciones que justifica la necesidad de analizar los factores asociados al churn.
+
+---
+
+### Evasión según género
+![Evasión por género](images/churn_por_genero.png)
+
+🔹 **Insight:**  
+No se observan diferencias significativas en la evasión entre géneros, lo que indica que esta variable no es un factor determinante por sí sola.
+
+---
+
+### Evasión según tipo de contrato
+![Evasión por contrato](images/churn_por_contrato.png)
+
+🔹 **Insight:**  
+Los clientes con contratos **mes a mes** presentan una tasa de evasión considerablemente mayor que aquellos con contratos anuales o bianuales.
+
+---
+
+### Relación entre cargos diarios y evasión
+![Cargos diarios vs evasión](images/cargos_vs_evasion.png)
+
+🔹 **Insight:**  
+Los clientes con cargos diarios más altos tienden a mostrar una mayor propensión a cancelar el servicio, lo que sugiere sensibilidad al precio.
+
+---
+
+### Cantidad de servicios contratados y evasión
+![Servicios vs evasión](images/servicios_vs_evasion.png)
+
+🔹 **Insight:**  
+A medida que aumenta la cantidad de servicios contratados, la probabilidad de evasión disminuye, indicando mayor fidelización del cliente.
+
+
+📈 Insights Destacados
+
+Los clientes con menor antigüedad presentan mayores tasas de evasión.
+
+Los contratos mes a mes están asociados a mayor churn.
+
+Clientes con menor gasto total acumulado tienden a cancelar con mayor frecuencia.
+
+Existe una relación negativa entre antigüedad y evasión.
+
+A mayor cantidad de servicios contratados, menor probabilidad de churn.
+
+✅ Recomendaciones
+
+Fomentar contratos de mayor duración con incentivos.
+
+Implementar estrategias de cross-selling para aumentar la cantidad de servicios.
+
+Diseñar acciones de retención temprana para clientes nuevos.
+
+Identificar perfiles de alto riesgo para campañas personalizadas.
+
+## ▶️ Cómo ejecutar el proyecto
 
 1. Clonar el repositorio
    ```
